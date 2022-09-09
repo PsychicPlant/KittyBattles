@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My form page</title>
+    </head>
+    <body>
+        <h3>In this here form, you will fill out things that make little sense.</h3>
+        <form>
+            <label for="ncat">Number of cats:</label>
+            <input type="number" size="3" min="0" required>
+            <p/>
+        
+            <label for="email">Email to send cat pictures to:</label>
+            <input type="email" id="email" name="email">
+            <p/>
+      
+            <fieldset>
+                <legend>Type of cat owned:</legend>
+                <label for="cuddlycat">Cuddly</label>
+                <input type="radio" id="cuddlycat" name="tcat" value="cuddly">
+                <p/>
+                <label for="angrycat">Angry</label>
+                <input type="radio" id="angrycat" name="tcat" value="angry">
+                <p/>
+                <label for="lazycat">Lazy</label>
+                <input type="radio" id="lazycat" name="tcat" value="lazy">
+                <p/>
+                <label for="nocat">I don't have a cat companion :(</label>
+                <input type="radio" id="nocat" name="tcat" value="no" disabled>
+            </fieldset>
+        
+            <fieldset>
+                <legend>I like:</legend>
+                <label for="likebutt">Butts</label>
+                <input type="checkbox" id="likebutt" name="like" value="butt">
+                <label for="likebucks">Bucks</label>
+                <input type="checkbox" id="likebucks" name="like" value="bucks">
+                <label for="likebuds">Buds</label>
+                <input type="checkbox" id="likebuds" name="like" value="buds">
+            </fieldset>
+            <p/>
+            <input type="submit" value="Submit!">
+        </form>
+    </body>
+</html>
