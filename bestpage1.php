@@ -12,6 +12,7 @@
 
         <p>
             <img src="polygang.png" alt="The meanest frogs in town.">
+	    <?php echo "<p/><p>Something in the water.</p>" ?>
         </p>
         <div>
             <ol>
@@ -22,7 +23,7 @@
             <ul>
                 <li>Yes</li>
                 <li>No</li>
-                <li>Maybe?</li>
+                <li><?="Definitely!"?></li>
             </ul>
         </div>
     </body>
