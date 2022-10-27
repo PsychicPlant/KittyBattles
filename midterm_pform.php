@@ -32,6 +32,7 @@
 
 		echo "</br>Bonus var_dump!:";
 		var_dump($_POST);
+		mysqli_close($conn);
 		?>
 
 	</body>

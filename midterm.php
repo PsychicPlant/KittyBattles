@@ -30,6 +30,7 @@
 				value='{$row['product_name']}'>\n
 				<label for={$row['product_name']}>{$row['product_name']}</label></br>";
 			}
+		mysqli_close($conn);
 		?>
 		</br>
 		<input type='submit' value='Submit!'/>
