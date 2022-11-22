@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<script>
+		function destroytheearth()
+		{
+			document.getElementById('p1').innerHTML="The world was destroyed";
+		}
+
+		function vanishprobs(p)
+		{
+			x = document.getElementById(p);
+			y = document.getElementById('vanishbutton');
+			if (x.style.display === "none")
+			{
+				x.style.display = "block";
+				y.value = "Click me, and all of your problems will go away!";
+			}
+			else
+			{
+				x.style.display = "none";
+				y.value = "Click me if boredom finally consumed you, and you wish to once again to have some burden, so that you feel alive.";
+			}
+		}
+
+	</script>
         <title>My first page</title>
     </head>
     <body>
@@ -22,6 +45,19 @@
         </p>
 	</br>
 	<input type='button' id='alertbutton' name='alertbutton' 
-	value="Go on, touch me" onclick="alert('lmao gotcha')">
+	value="Go on, touch me" onclick="destroytheearth()";>
+	</br>
+	<p id="p1">
+	     Such splendid beauty has the soil spawned.
+	</p>
+	</br>
+	</br>
+	<input type='button' id='vanishbutton' name='vanishbutton'
+        value="Click me, and all of your problems will go away!" onclick="vanishprobs('p2')";>
+        </br>
+	<p id="p2" style="display: block">
+	Problems, problems, problems, problems, problems, problems, problems, problems, problems, problems, problems, problems, problems, problems, problems.
+	</p>	
+
     </body>
 </html>
