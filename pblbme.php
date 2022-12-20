@@ -3,17 +3,13 @@
 <head>
 	<title>BME interfacing webpage</title>
 	<script>
-		let out_num = 0;
-
 		function changenum()
 		{
 			const xhttp = new XMLHttpRequest();
 			xhttp.onload = function ()
 			{
-				let numchar = this.responseText;
-				let str_in = xreading(numchar);
-				let in_num = parseFloat(str_in);
-				out_num = out_num + in_num;
+				let response = JSON.parse(this.responseText);
+				let out_num = response.temperature;
 				document.getElementById("demo").innerHTML = out_num.toString();
 			}
 		xhttp.open("GET", "bme.php");
