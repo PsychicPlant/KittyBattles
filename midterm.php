@@ -5,8 +5,8 @@
 
 		<?php
 		$server = "localhost";
-		$username = "php";
-		$password = "password";
+		$username = "root";
+		$password = "gui";
 		$database = "KITTYCAT";
 		$conn = mysqli_connect($server, $username, $password, $database);
 
