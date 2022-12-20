@@ -11,28 +11,30 @@
 			xhttp.onload = function ()
 			{
 				let numchar = this.responseText;
-				let in_num = parseFloat(numchar);
+				let str_in = xreading(numchar);
+				let in_num = parseFloat(str_in);
 				out_num = out_num + in_num;
-				document.write(typeof numchar);
 				document.getElementById("demo").innerHTML = out_num.toString();
 			}
 		xhttp.open("GET", "bme.php");
 		xhttp.send();
 
 		}
+
+		function xreading(str)
+		{
+			pstring = str.replace(/[^a-zA-Z0-9.]/g, '');
+			return pstring
+		}
+
 	</script>
 </head>
 <body>
-//	<?php
-//		$raw = exec('./bme280/bme280');
-//		$cooked = json_decode($raw);
-//		echo $cooked->temperature;
-//		echo json_encode($cooked->temperature);
-//	?>
 	</br>
 	<div id="demo">
 	<h2>Number</h2>
 	</div>
+	</br>
 	<button type="button" onclick="changenum()";>Change!</button>
 </body>
 </html>
