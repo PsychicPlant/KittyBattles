@@ -5,6 +5,15 @@
 </style>
 <head>
 	<title>Lab 7 PHP file</title>
+	<script>
+		function toggledisplay(a)
+		{
+			x = document.getElementById(a);
+			if(x.style.display === "none"){x.style.display = "block";}
+			else{x.style.display = "none";}
+			return 0;
+		}
+	</script>
 </head>
 <body>
 	<?php
@@ -35,16 +44,19 @@
 		echo "</table>";
 		echo "</p>";
 	?>
-	<form action="lab7_pform.php" method="post">
+	<form action="fighterchoice.php" method="post">
 	<?php
 		echo "\n\n<h2>Now, choose the destiny of those fighters:</h2>\n\n";
-		echo "<input type='radio' id=1 name='select_fate' value=1 required>
-		      <label for='select_fate'>Add/Modify a fighter</label>\n";
-		echo "<input type='radio' id=2 name='select_fate' value=2>
-		      <label for='select_fate'>Delete a fighter</label></br></br>\n";
+		echo "<input type='radio' id=1 name='select' value=1 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\" required></input>
+		      <label>Add a fighter</label>\n";
+		echo "<input type='radio' id=2 name='select' value=2 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\">";
+		echo "<label>Delete a fighter</label></br></br>";
+
+		echo "<input type='radio' id=3 name='select' value=3>";
+		echo "<label>TO BATTLE!</label></br></br>";
 		//Radio buttons to decide if the change will be insert or drop
-		echo "<label for='fighters'>Select a fighter.</label>\n</br></br>";
-		echo "<select id='foghters' name='fighters'>";
+		echo "<label id='fighter_del' style='display: none'>Select a fighter.</label></br>";
+		echo "<select id='del' name='fighters' style='display: none'>";
 		foreach($result as $row)
 		{
 			echo "<option value={$row['id']}>{$row['kittynames']}</option>";

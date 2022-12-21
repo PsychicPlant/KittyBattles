@@ -4,41 +4,42 @@
         <title>My form page</title>
     </head>
     <body>
-        <h3>In this here form, you will fill out things that make little sense.</h3>
-        <form action="lab5php.php" method="post">
-            <label for="ncat">Number of cats:</label>
-            <input type="number" id="ncat" name="ncat" size="3" min="0" required>
-            <p/>
-        
-            <label for="email">Email to send cat pictures to:</label>
-            <input type="email" id="email" name="email">
-            <p/>
-      
+        <form action="insertdb.php" method="post" target="_blank">
+        <h3>CREATE YOUR NEW BEAST</h3>
+            <p align="justify">
             <fieldset>
-                <legend>Type of cat owned:</legend>
-                <label for="cuddlycat">Cuddly</label>
-                <input type="radio" id="cuddlycat" name="tcat" value="cuddly">
-                <p/>
-                <label for="angrycat">Angry</label>
-                <input type="radio" id="angrycat" name="tcat" value="angry">
-                <p/>
-                <label for="lazycat">Lazy</label>
-                <input type="radio" id="lazycat" name="tcat" value="lazy">
-                <p/>
-                <label for="nocat">I don't have a cat companion :(</label>
-                <input type="radio" id="nocat" name="tcat" value="no" disabled>
-            </fieldset>
-        
+	    <legend>Titles</legend>
+            <label for="namecat">Name of your cat:</label>
+            <input type="text" id="namecat" name="namecat" size="10" min="0" required>
+	    &emsp;
+            <label for="nameowner">Name of the cat's trainer:</label>
+            <input type="text" id="nameowner" name="nameowner" size="10" min="0" required>
+	    </fieldset>
+       	    </br> 
+	    <fieldset>
+	    <legend>Elemental Affinities</legend>
+            <label for="fire">Fire Affinity:</label>
+            <input type="number" id="fire" name="fire" size="1" min="1" max="9" required>
+  	    &ensp;
+            <label for="earth">Earth Affinity:</label>
+            <input type="number" id="earth" name="earth" size="1" min="1" max="9" required>
+            &ensp;
+	    <label for="air">Air Affinity:</label>
+            <input type="number" id="air" name="air" size="1" min="1" max="9" required>
+	    </fieldset>
+      	    </br>
             <fieldset>
-                <legend>I like:</legend>
-                <label for="likebutt">Butts</label>
-                <input type="checkbox" id="likebutt" name="like" value="butt">
-                <label for="likebucks">Bucks</label>
-                <input type="checkbox" id="likebucks" name="like" value="bucks">
-                <label for="likebuds">Buds</label>
-                <input type="checkbox" id="likebuds" name="like" value="buds">
+                <legend>Feline Characteristics</legend>
+		</br>
+                <label for="catweight">Weight of feline:</label>
+                <input type="number" id="catweight" name="catweight" size="2" min="1" max="30" required>lbs
+		</br>
+		</br>
+		<label for="catspeed">Speed of feline</label>
+                <input type="number" id="catspeed" name="catspeed" size="2" min="1" max="100" required>km/h
             </fieldset>
             <p/>
+	</br>
             <input type="submit" value="Submit!">
         </form>
     </body>
