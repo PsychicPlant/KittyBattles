@@ -48,9 +48,12 @@
 	<?php
 		echo "\n\n<h2>Now, choose the destiny of those fighters:</h2>\n\n";
 		echo "<input type='radio' id=1 name='select' value=1 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\" required></input>
-		      <label for='select_fate'>Add/Modify a fighter</label>\n";
+		      <label>Add/Modify a fighter</label>\n";
 		echo "<input type='radio' id=2 name='select' value=2 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\">";
-		echo "<label for='select_fate'>Delete a fighter</label></br></br>";
+		echo "<label>Delete a fighter</label></br></br>";
+
+		echo "<input type='radio' id=3 name='select' value=3>";
+		echo "<label>TO BATTLE!</label></br></br>";
 		//Radio buttons to decide if the change will be insert or drop
 		echo "<label id='fighter_del' style='display: none'>Select a fighter.</label></br>";
 		echo "<select id='del' name='fighters' style='display: none'>";
