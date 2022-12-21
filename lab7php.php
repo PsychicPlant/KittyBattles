@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<style>
+	table, th, td {border:1px solid black;}
+</style>
 <head>
 	<title>Lab 7 PHP file</title>
 </head>
@@ -19,10 +22,18 @@
 		$result = mysqli_query($conn, $sql);
 		echo "\n<h3>As it stands, these are the gladiators of today's brawl:</h3>";
 		echo "<p align='justify'>";
+		echo "<table style='width:100%'>";
+		echo "<tr> <th>ID</th> <th>Kitty</th> <th>Master</th> <th>Weight</th>
+		 <th>Fire Affinity</th> <th>Earth Affinity</th>
+		 <th>Air Affinity</th> <th>Velocity</th> </tr>";
 		foreach($result as $row){
-			echo "id: {$row['id']} | name: {$row['kittynames']} | weight: {$row['kittyweights']} | owner: {$row['kittyowners']} <br/>";
+			echo "<tr> <td>{$row['id']}</td> <td>{$row['kittynames']}</td> <td>{$row['kittyowners']}</td>
+			 <td>{$row['kittyweights']}</td> <td>{$row['kittyfire']}</td>
+			 <td>{$row['kittyearth']}</td> <td>{$row['kittyair']}</td>
+			 <td>{$row['kittyspeed']}</td></tr>";
 		}
-		echo "</p>"
+		echo "</table>";
+		echo "</p>";
 	?>
 	<form action="lab7_pform.php" method="post">
 	<?php

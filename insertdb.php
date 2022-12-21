@@ -18,15 +18,15 @@
 
 		$namecat = htmlspecialchars($_POST["namecat"]);
 		$nameowner = htmlspecialchars($_POST["nameowner"]);
-		$nameowner = htmlspecialchars($_POST["fire"]);
-		$nameowner = htmlspecialchars($_POST["earth"]);
-		$nameowner = htmlspecialchars($_POST["air"]);
-		$nameowner = htmlspecialchars($_POST["catweight"]);
-		$nameowner = htmlspecialchars($_POST["catspeed"]);
-		$sql = ";";
+		$catfire = htmlspecialchars($_POST["fire"]);
+		$catearth = htmlspecialchars($_POST["earth"]);
+		$catair = htmlspecialchars($_POST["air"]);
+		$catweight = htmlspecialchars($_POST["catweight"]);
+		$catspeed = htmlspecialchars($_POST["catspeed"]);
+		$sql = "insert into kitties (kittynames, kittyowners, kittyweights, kittyfire, kittyearth, kittyair, kittyspeed) values ('$namecat', '$nameowner', '$catweight', '$catfire', '$catearth', '$catair', '$catspeed');";
 		$result = mysqli_query($conn, $sql);
-
 	?>
 	</p>
+	<script>window.open("lab7php.php","_self");</script>
 </body>
 </html>
