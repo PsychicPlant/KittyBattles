@@ -4,7 +4,6 @@
 	<title>Lab 7 PHP file</title>
 </head>
 <body>
-	<p>
 	<?php
 		$servername = "localhost";
 		$username = "root";
@@ -19,9 +18,11 @@
 		$sql = "select * from kitties;";
 		$result = mysqli_query($conn, $sql);
 		echo "\n<h3>As it stands, these are the gladiators of today's brawl:</h3>";
+		echo "<p align='justify'>";
 		foreach($result as $row){
 			echo "id: {$row['id']} | name: {$row['kittynames']} | weight: {$row['kittyweights']} | owner: {$row['kittyowners']} <br/>";
 		}
+		echo "</p>"
 	?>
 	<form action="lab7_pform.php" method="post">
 	<?php
@@ -42,6 +43,5 @@
 	</br></br></br>
 	<input type='submit' value='Let there be blood!'/>
 	</form>
-	</p>
 </body>
 </html>
