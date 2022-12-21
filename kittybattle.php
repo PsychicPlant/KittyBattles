@@ -48,7 +48,7 @@
 	<?php
 		echo "\n\n<h2>Now, choose the destiny of those fighters:</h2>\n\n";
 		echo "<input type='radio' id=1 name='select' value=1 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\" required></input>
-		      <label>Add/Modify a fighter</label>\n";
+		      <label>Add a fighter</label>\n";
 		echo "<input type='radio' id=2 name='select' value=2 onfocus=\"toggledisplay('fighter_del'); toggledisplay('del');\">";
 		echo "<label>Delete a fighter</label></br></br>";
 
