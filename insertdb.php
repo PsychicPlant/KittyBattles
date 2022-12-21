@@ -27,6 +27,6 @@
 		$result = mysqli_query($conn, $sql);
 	?>
 	</p>
-	<script>window.open("lab7php.php","_self");</script>
+	<script>window.open("kittybattles.php","_self");</script>
 </body>
 </html>
