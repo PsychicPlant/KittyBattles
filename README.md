@@ -5,6 +5,7 @@ We were required to **fetch data asynchronously** from a measuring device and di
 I decided to go one step *further* and make a **minigame** out of it using nothing but **PHP/HTML and JS**.
 
 The website was being hosted locally on a **Raspberry PI 4b** running Mint Linux, by an **Apache** webserver.
+The user input is stored in a locally hosted **SQL database**, through the server **Mariadb**.
 The measuring device was a **BME280**.
 
 The BME280 is **a combined digital humidity, pressure and temperature sensor** based on proven sensing principles. Its small dimensions and its low power consumption allow the implementation in battery driven devices such as handsets, GPS modules or watches.
@@ -13,7 +14,7 @@ To use the BME280's sensors, we utilized an open source Git project which commun
 
 # Description
 
-
+The user is prompted to register a new fighter 
 
 Since the decimal point accuracy is so precise, the decimal values from the readings are constantly changing due to the sensors not being in a stable environment.
 I use this property to extract these pseudo-random variations and use them as scalars to determine damage
