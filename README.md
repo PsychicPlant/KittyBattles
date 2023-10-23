@@ -14,10 +14,10 @@ To use the BME280's sensors, we utilized an open source Git project which commun
 
 # Description
 
-The user is prompted to register a new fighter. This fighter will have elemental attributes defined by the user through an HTML form.
+The user is prompted to register a new fighter. This fighter will have elemental attributes defined by the user through an **HTML form**.
 
 Since the decimal point accuracy is so precise on the sensor readings, the decimal values from them are constantly changing due to the sensor not being in a stable environment.
-I use this property to extract these pseudo-random variations and use them as scalars to determine damage dealt to the other fighter in a turn-base fashion.
+I use this property to extract these **pseudo-random variations** and use them as **scalars** to determine damage dealt to the other fighter in a turn-base fashion.
 
 Altitude is a scalar for the Air attribute.
 Temperature is a scalar for the Fire attribute.
